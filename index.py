@@ -14,6 +14,7 @@ ec_model = model()
 
 @app.route("/churn-model", methods=["POST", "GET"])
 def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retention_scale=0.01, retention_life_exp=12, fix_costs=10000, result=""):
+    a="hello.html"
     if request.method == "POST":
         weight = request.form["weight"]
         arpu = request.form["arpu"]
@@ -31,9 +32,7 @@ def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retent
 	#print >> logfile, result
 	#print >> logfile, "</response>"
 	#logfile.close()
-	a="hello.html"+"#mod"
-     else:
-	a="hello.html"
+	a="hello.html"+"#mod"	
 	    
     return render_template(a, weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
 
