@@ -8,7 +8,6 @@ itsdangerous==0.24
 Jinja2==2.8.1
 MarkupSafe==0.23
 numpy==1.11.3
-pickle=='$Revision: 72223 $'
 python-dateutil==1.5
 requests==2.12.4
 scikit-learn==0.18.0
