@@ -32,9 +32,9 @@ def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retent
 	#print >> logfile, result
 	#print >> logfile, "</response>"
 	#logfile.close()
-	a="hello.html"+"#mod"	
+	#a="hello.html"+"#mod"	
 	    
-    return render_template(a, weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
+    return render_template(a, _anchor='mod', weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
 
 
 if __name__ == "__main__":
