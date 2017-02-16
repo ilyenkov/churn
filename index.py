@@ -34,7 +34,7 @@ def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retent
 	#logfile.close()
 	#a="hello.html"+"#mod"
 	render_template(a, weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
-	return redirect(url_for("/churn-model", _anchor='mod'))    
+	return redirect(url_for(index_page, _anchor="mod"))    
     else:
 	return render_template(a, weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
 
