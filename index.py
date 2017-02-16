@@ -25,7 +25,7 @@ def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retent
         fix_costs = request.form["fix_costs"]
         result = ec_model.effect(weight, arpu, retention_cost, retention_prob, retention_scale, retention_life_exp, fix_costs)       
         
-    	return render_template("hello-model.html", weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result), redirect(url_for('index_page', _anchor="mod"))    
+    	return render_template("hello_model.html", weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result), redirect(url_for('index_page', _anchor="mod"))    
     else:
 	return render_template("hello.html", weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
 #def index_page_mod():
