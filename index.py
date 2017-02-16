@@ -11,6 +11,7 @@ app = Flask(__name__)
 ec_model = model()
 #print "Model is ready"
 #print time.time() - start_time, "seconds"
+a="hello.html"
 
 @app.route("/churn-model", methods=["POST", "GET"])
 def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retention_scale=0.01, retention_life_exp=12, fix_costs=10000, result=""):
@@ -31,8 +32,9 @@ def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retent
 	#print >> logfile, result
 	#print >> logfile, "</response>"
 	#logfile.close()
+	a="hello.html"+"#mod"
 	    
-    return render_template("hello.html", weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
+    return render_template(a, weight=weight, arpu=arpu, retention_cost=retention_cost, retention_prob=retention_prob, retention_scale=retention_scale, retention_life_exp=retention_life_exp, fix_costs=fix_costs, result=result)
 
 
 if __name__ == "__main__":
