@@ -22,7 +22,7 @@ def index_page(weight=0, arpu=100, retention_cost=20, retention_prob=0.2, retent
         retention_scale = request.form["retention_scale"]
         retention_life_exp = request.form["retention_life_exp"]
         fix_costs = request.form["fix_costs"]
-        logfile = open("ydf_demo_logs.txt", "a", "utf-8")
+        #logfile = open("ydf_demo_logs.txt", "a", "utf-8")
 	#print weight, arpu, retention_cost, retention_prob, retention_scale, retention_life_exp, fix_costs
 	#print >> logfile, "<response>"
 	#print >> logfile, weight, arpu, retention_cost, retention_prob, retention_scale, retention_life_exp, fix_costs
