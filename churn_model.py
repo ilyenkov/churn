@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'xead'
 import pickle
-import os
+#import os
 import numpy as np
 import pandas as pd
 
