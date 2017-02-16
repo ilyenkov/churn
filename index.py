@@ -3,7 +3,7 @@ __author__ = 'xead'
 from churn_model import model
 from codecs import open
 #import time
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 #print "Preparing model"
